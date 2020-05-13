@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitStart"
+        android:src="@drawable/profile_fragment_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout2"
+        style="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFF"
+        android:stateListAnimator="@animator/appbar_always_elevated"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:liftOnScroll="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:outlineAmbientShadowColor="@color/mainColor"
+            app:navigationIcon="@drawable/ic_beach_access_black_24dp"
+            app:title="@string/app_title"
+            app:titleMarginStart="70dp"
+            app:titleTextAppearance="@style/titlebar"
+            app:titleTextColor="@color/mainColor" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_holder"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="center"
+                android:src="@drawable/image_holder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.58"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/usn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textAppearance="@style/Subheadings"
+                app:layout_constraintEnd_toEndOf="@+id/image_holder"
+                app:layout_constraintStart_toStartOf="@+id/image_holder"
+                app:layout_constraintTop_toBottomOf="@+id/image_holder" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="paishreya2305"
+                android:textAppearance="@style/SubheadingsInfo"
+                app:layout_constraintEnd_toEndOf="@+id/usn"
+                app:layout_constraintStart_toStartOf="@+id/usn"
+                app:layout_constraintTop_toBottomOf="@+id/usn" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/username_edit"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="10dp"
+                android:hint="Username"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/usn"
+                app:layout_constraintStart_toStartOf="@+id/usn"
+                app:layout_constraintTop_toBottomOf="@+id/usn">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/username_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/eml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Email"
+                android:textAppearance="@style/Subheadings"
+                app:layout_constraintEnd_toEndOf="@+id/username_edit"
+                app:layout_constraintStart_toStartOf="@+id/username_edit"
+                app:layout_constraintTop_toBottomOf="@+id/username_edit" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="paishreya2305@gmail.com"
+                android:textAppearance="@style/SubheadingsInfo"
+                app:layout_constraintEnd_toEndOf="@+id/eml"
+                app:layout_constraintStart_toStartOf="@+id/eml"
+                app:layout_constraintTop_toBottomOf="@+id/eml" />
+
+            <TextView
+                android:id="@+id/gnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Gender"
+                android:textAppearance="@style/Subheadings"
+                app:layout_constraintEnd_toEndOf="@+id/email"
+                app:layout_constraintStart_toStartOf="@+id/email"
+                app:layout_constraintTop_toBottomOf="@+id/email" />
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Female"
+                android:textAppearance="@style/SubheadingsInfo"
+                app:layout_constraintEnd_toEndOf="@+id/gnd"
+                app:layout_constraintStart_toStartOf="@+id/gnd"
+                app:layout_constraintTop_toBottomOf="@+id/gnd" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/gender_edit"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="10dp"
+                android:hint="Gender"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/gnd"
+                app:layout_constraintStart_toStartOf="@+id/gnd"
+                app:layout_constraintTop_toBottomOf="@+id/gnd">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/gender_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/dobheading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Date Of Birth"
+                android:textAppearance="@style/Subheadings"
+                app:layout_constraintEnd_toEndOf="@+id/gender_edit"
+                app:layout_constraintStart_toStartOf="@+id/gender_edit"
+                app:layout_constraintTop_toBottomOf="@+id/gender_edit" />
+
+            <TextView
+                android:id="@+id/dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="15/11/1999"
+                android:textAppearance="@style/SubheadingsInfo"
+                app:layout_constraintEnd_toEndOf="@+id/dobheading"
+                app:layout_constraintStart_toStartOf="@+id/dobheading"
+                app:layout_constraintTop_toBottomOf="@+id/dobheading" />
+
+            <Button
+                android:id="@+id/edit_profile_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/mainColor"
+                android:text="Edit Profile"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/dob"
+                app:layout_constraintStart_toStartOf="@+id/dob"
+                app:layout_constraintTop_toBottomOf="@+id/dob" />
+
+            <Button
+                android:id="@+id/save_profile_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="@color/mainColor"
+                android:text="Save"
+                android:textSize="20sp"
+                android:visibility="invisible"
+                app:layout_constraintBaseline_toBaselineOf="@+id/cancel_profile_btn"
+                app:layout_constraintEnd_toEndOf="@+id/gender_edit"
+                app:layout_constraintStart_toEndOf="@+id/cancel_profile_btn" />
+
+            <Button
+                android:id="@+id/cancel_profile_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/mainColor"
+                android:text="Cancel"
+                android:textSize="20sp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="@+id/gender_edit"
+                app:layout_constraintTop_toBottomOf="@+id/dob" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

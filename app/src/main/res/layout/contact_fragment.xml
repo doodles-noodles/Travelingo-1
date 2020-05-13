@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cordinate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:outlineSpotShadowColor="#000">
+
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFF"
+            android:stateListAnimator="@animator/appbar_always_elevated"
+            app:liftOnScroll="true">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:outlineAmbientShadowColor="@color/mainColor"
+                app:navigationIcon="@drawable/ic_beach_access_black_24dp"
+                app:title="@string/app_title"
+                app:titleMarginStart="70dp"
+                app:titleTextAppearance="@style/titlebar"
+                app:titleTextColor="@color/mainColor" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ExpandableListView
+            android:id="@+id/expandable_view_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="60dp">
+
+        </ExpandableListView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

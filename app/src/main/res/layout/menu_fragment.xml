@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_fragment_bg">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        style="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFF"
+        android:stateListAnimator="@animator/appbar_always_elevated"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:liftOnScroll="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:outlineAmbientShadowColor="@color/mainColor"
+            app:navigationIcon="@drawable/ic_beach_access_black_24dp"
+            app:title="@string/app_title"
+            app:titleMarginStart="70dp"
+            app:titleTextAppearance="@style/titlebar"
+            app:titleTextColor="@color/mainColor" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp">
+
+            <Button
+                android:id="@+id/clear_cache"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/roboto"
+                android:onClick="clearcache"
+                android:text="Clear Cache"
+                android:textAllCaps="false"
+                android:textColor="#000010"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread_inside" />
+
+            <Button
+                android:id="@+id/terms_conditions"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto"
+                android:text="Terms &amp; Conditions"
+                android:textAllCaps="false"
+                android:textColor="#000010"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="@+id/clear_cache"
+                app:layout_constraintTop_toBottomOf="@+id/clear_cache" />
+
+            <Button
+                android:id="@+id/privacy_policy"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto"
+                android:text="Privacy Policy"
+                android:textAllCaps="false"
+                android:textColor="#000010"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="@+id/terms_conditions"
+                app:layout_constraintTop_toBottomOf="@+id/terms_conditions" />
+
+            <Button
+                android:id="@+id/help_support"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto"
+                android:text="Help &amp; Support"
+                android:textAllCaps="false"
+                android:textColor="#000010"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="@+id/privacy_policy"
+                app:layout_constraintTop_toBottomOf="@+id/privacy_policy" />
+
+            <Button
+                android:id="@+id/report_problem"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto"
+                android:onClick="ReportProblem"
+                android:text="Report Problem"
+                android:textAllCaps="false"
+                android:textColor="#000010"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="@+id/help_support"
+                app:layout_constraintTop_toBottomOf="@+id/help_support" />
+
+            <Button
+                android:id="@+id/logout"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/roboto"
+                android:onClick="logout"
+                android:text="Logout"
+                android:textAllCaps="false"
+                android:textColor="#000010"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="@+id/report_problem"
+                app:layout_constraintTop_toBottomOf="@+id/report_problem" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/roboto"
+                android:text="@string/copyright_two"
+                android:textAllCaps="false"
+                android:textColor="#000010"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/logout"
+                app:layout_constraintTop_toBottomOf="@+id/logout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

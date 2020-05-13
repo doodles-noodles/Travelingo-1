@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "136810877774",
+    "firebase_url": "https://instatry-18296.firebaseio.com",
+    "project_id": "instatry-18296",
+    "storage_bucket": "instatry-18296.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136810877774:android:a3bff83dd5b06251bc041f",
+        "android_client_info": {
+          "package_name": "com.example.instatry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136810877774-4usalo9fl9ot48odg04mcg0oh8t7biiu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.instatry",
+            "certificate_hash": "80f99f542c50af21f441dd24e670fb3f6f6964c1"
+          }
+        },
+        {
+          "client_id": "136810877774-61rq31dbtcq68va7gn7f3lj61hjap783.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGfkipI0GBmRUp9P3bR3lAS7uXR3Yip3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136810877774-61rq31dbtcq68va7gn7f3lj61hjap783.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

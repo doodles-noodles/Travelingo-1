@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        style="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFF"
+        android:stateListAnimator="@animator/appbar_always_elevated"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:liftOnScroll="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_beach_access_black_24dp"
+            app:title="@string/app_title"
+            app:titleMarginStart="70dp"
+            app:titleTextAppearance="@style/titlebar"
+            app:titleTextColor="@color/mainColor" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/welcome_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/welcome_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="ನಮಸ್ಕಾರ,"
+                    android:textAppearance="@style/Welcome_title" />
+
+                <TextView
+                    android:id="@+id/welcome_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="Shreya Pai"
+                    android:textAppearance="@style/Welcome_title" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/welcome_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/welcome_layout"
+                android:layout_marginHorizontal="10dp"
+                android:alpha="0.6"
+                android:text="@string/welcome_info"
+                android:textAppearance="@style/Welcome_info" />
+
+            <TextView
+                android:id="@+id/bTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/welcome_info"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Beaches >"
+                android:textAppearance="@style/Welcome_info" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/beachesRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/bTitle"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/rTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/beachesRV"
+                android:layout_marginLeft="10dp"
+                android:text="Restaurants >"
+                android:textAppearance="@style/Welcome_info" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/restrauntsRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rTitle"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/nTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restrauntsRV"
+                android:layout_marginLeft="10dp"
+                android:text="NightLife >"
+                android:textAppearance="@style/Welcome_info" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/nightlifeRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/nTitle"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/relTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nightlifeRV"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Religious Places >"
+                android:textAppearance="@style/Welcome_info" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/religiousRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/relTitle"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/hTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/religiousRV"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Hillstations >"
+                android:textAppearance="@style/Welcome_info" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/hillsationRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/hTitle"
+                android:orientation="horizontal" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
