@@ -47,7 +47,6 @@ public class Place extends AppCompatActivity {
 
     public void gotoMaps(View view) {
         Toast.makeText(this, "Maps" + latitude + longitude, Toast.LENGTH_SHORT).show();
-        // Go to Maps Activity (use intent or whatever)
-        // use variables latitude and longitude variables
+
     }
 }

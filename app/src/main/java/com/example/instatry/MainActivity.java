@@ -65,9 +65,6 @@ public class MainActivity extends AppCompatActivity {
     public String photourl = "None";
     public String username = "None";
 
-    AlphaAnimation inAnimation;
-    AlphaAnimation outAnimation;
-
     FrameLayout progressBarHolder;
 
     @Override
