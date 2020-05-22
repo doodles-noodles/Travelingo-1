@@ -185,4 +185,16 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(help);
         overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
     }
+
+    public void TermsAndConditions(View view) {
+        Intent terms = new Intent(HomeActivity.this, TermsAndConditions.class);
+        startActivity(terms);
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+    }
+
+    public void PrivacyPolicy(View view) {
+        Intent privacy = new Intent(HomeActivity.this, PrivacyPolicy.class);
+        startActivity(privacy);
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+    }
 }

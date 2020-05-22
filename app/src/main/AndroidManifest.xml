@@ -17,7 +17,9 @@
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HelpSupport"></activity>
+        <activity android:name=".PrivacyPolicy"></activity>
+        <activity android:name=".TermsAndConditions" />
+        <activity android:name=".HelpSupport" />
         <activity android:name=".OnboardingScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
