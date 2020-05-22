@@ -17,6 +17,7 @@
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".HelpSupport"></activity>
         <activity android:name=".OnboardingScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +28,7 @@
         <activity android:name=".Problem" />
         <activity android:name=".Article" />
         <activity android:name=".Place" />
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
         <activity android:name=".EnterDetails" />
         <activity android:name=".HomeActivity" />
 

@@ -179,4 +179,10 @@ public class HomeActivity extends AppCompatActivity {
             return false;
         }
     }
+
+    public void HelpAndSupport(View view) {
+        Intent help = new Intent(HomeActivity.this, HelpSupport.class);
+        startActivity(help);
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+    }
 }

@@ -98,6 +98,7 @@
                 android:textAllCaps="false"
                 android:textColor="#000010"
                 android:textSize="25sp"
+                android:onClick="HelpAndSupport"
                 app:layout_constraintStart_toStartOf="@+id/privacy_policy"
                 app:layout_constraintTop_toBottomOf="@+id/privacy_policy" />
 
