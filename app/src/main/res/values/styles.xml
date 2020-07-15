@@ -128,4 +128,9 @@
         <item name="android:textColor">#6C63FF</item>
     </style>
 
+    <style name="contact_info">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textColor">#6C63FF</item>
+    </style>
 </resources>

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -46,7 +45,8 @@ public class Place extends AppCompatActivity {
     }
 
     public void gotoMaps(View view) {
-        Toast.makeText(this, "Maps" + latitude + longitude, Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                Uri.parse("http://maps.google.com/maps?daddr="+latitude+","+longitude));
+        startActivity(intent);
     }
 }
